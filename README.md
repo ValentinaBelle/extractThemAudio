@@ -1,1 +1,1 @@
-If you need to extract an audio line from a video for whatever reason, you do you, boo :)
+If you need to extract audio from a video file and add some password to your pdf file.
