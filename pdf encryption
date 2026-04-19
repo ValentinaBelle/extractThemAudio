@@ -1,1 +1,14 @@
+from PyPDF2 import PdfWriter, PdfReader
+from getpass import getpass
+pdf_write = PdfWriter()
+pdf_read = PdfReader('your_file.pdf')
 
+# перебираем циклом листы
+for page in range (pdf_read.numPages):
+    pdf_write.add_page(pdf_read.pages[page])
+
+them_pass = getpass(prompt='Введите пароль для этого файла ')
+pdf_write.encrypt(them_pass)
+
+with open('encrypted.pdf', 'wb') as file:
+    pdf_write.write(file)
